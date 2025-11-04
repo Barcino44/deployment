@@ -25,7 +25,7 @@ function login() {
 
 async function postLogin(LoginRequest){
     let json= JSON.stringify(LoginRequest);
-    let response = await fetch('https://back-production-5d7a.up.railway.app:8080/admin/login',{
+    let response = await fetch('https://back-production-5d7a.up.railway.app/admin/login',{
        method: 'POST',
        headers:{
          'Content-Type': 'application/json'

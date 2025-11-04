@@ -4,7 +4,7 @@ async function getUnlinkedDevices() {
     const container = document.getElementById("idDeviceContainer");
     container.innerHTML = "";
 
-    let response = await fetch("https://back-production-5d7a.up.railway.app:8080/admin/clients/unlinkedDevices", {
+    let response = await fetch("https://back-production-5d7a.up.railway.app/admin/clients/unlinkedDevices", {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     });
@@ -87,7 +87,7 @@ async function deleteDevices(deviceIds) {
         return;
     }
     if (confirm(`¿Estás seguro de que deseas eliminar a los dispositivos seleccionados?`)) {
-        const response = await fetch("https://back-production-5d7a.up.railway.app:8080/admin/devices/delete", {
+        const response = await fetch("https://back-production-5d7a.up.railway.app/admin/devices/delete", {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(deviceIds)
