@@ -69,7 +69,7 @@ function initChart(chart, dps, containerName) {
 // Llama esto al seleccionar un dispositivo
 async function showTempMeasurements() {
 	try {
-		const response = await fetch(`http://deployment.railway.internal:8080/device/get/tempMeasurements/${deviceId}`);
+		const response = await fetch(`https://back-production-5d7a.up.railway.app:8080/device/get/tempMeasurements/${deviceId}`);
 		if (!response.ok) throw new Error('Error al obtener mediciones');
 		const measurements = await response.json();
 		updateChartWithMeasurements(measurements, chart1, dps1);
@@ -80,7 +80,7 @@ async function showTempMeasurements() {
 }
 async function showMoistureMeasurements() {
 	try {
-		const response = await fetch(`http://deployment.railway.internal:8080/device/get/moisMeasurements/${deviceId}`);
+		const response = await fetch(`https://back-production-5d7a.up.railway.app:8080/device/get/moisMeasurements/${deviceId}`);
 		if (!response.ok) throw new Error('Error al obtener mediciones');
 		const measurements = await response.json();
 		updateChartWithMeasurements(measurements, chart2, dps2);

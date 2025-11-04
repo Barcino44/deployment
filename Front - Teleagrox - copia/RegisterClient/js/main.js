@@ -40,7 +40,7 @@ if (!emailTF.value.trim()) {
         idDevices: deviceIds 
     };
     let json = JSON.stringify(registerRequest);
-    let response = await fetch(`http://deployment.railway.internal:8080/admin/registerClient`, {
+    let response = await fetch(`https://back-production-5d7a.up.railway.app:8080/admin/registerClient`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -60,7 +60,7 @@ async function getUnlinkedDevices() {
     const container = document.getElementById("idDeviceContainer");
     container.innerHTML = "";
 
-    let response = await fetch("http://deployment.railway.internal:8080/admin/clients/unlinkedDevices", {
+    let response = await fetch("https://back-production-5d7a.up.railway.app:8080/admin/clients/unlinkedDevices", {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     });
