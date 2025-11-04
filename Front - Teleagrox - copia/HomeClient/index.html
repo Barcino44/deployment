@@ -6,7 +6,7 @@
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/HomeAdmin/css/bootstrap.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -21,50 +21,31 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
-	<div class="limiter">
-		<div class="container-login100">
+    <div class="container-login100 flex-grow-1 d-flex justify-content-center align-items-center" style="position: relative;">
+        <!-- Navbar sobrepuesta al fondo -->
+        <nav class="navbar navbar-dark navbar-overlap">
+            <div class="container align-items-center">
+                <a class="navbar-brand m-0">
+                    <img src="images/Teleagrox2.png" alt="Teleagrox" 
+                        style="height:70px; display: block; margin: 0 auto;">
+                </a>
+            </div>
+        </nav>
+		<div class="sidebar-overlap">
+            <a href="#"><i class="fa fa-home" style="color: #35ae51;"></i><span class="login100-form-title" style="color: #35ae51;">HOME</span></a>
+			<a href="#"><i class="fa fa-sign-out"></i><span class="login100-form-title">SALIR</span></a>
+        </div>
+		<div class = "main-content">
 			<div class="wrap-login100">
-				<div class="login100-pic js-tilt" data-tilt>
-					<img src="images/Teleagrox.png" alt="IMG">
-				</div>
-
-				<form class="login100-form validate-form">
-					<span class="login100-form-title">
-						INICIO DE SESIÓN
-					</span>
-
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" placeholder="Correo" id="emailTF">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-					</div>
-
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" placeholder="Contraseña" id="passwordTF">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-lock" aria-hidden="true"></i>
-						</span>
-					</div>
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" id="loginBTN" type="button">
-							Login
-						</button>
-					</div>
-					<div class="text-center p-t-12">
-						<span class="txt3">
-							<a href="/LoginAdmin/index.html">Soy administrador</a>
-						</span>
-						<a class="txt3" href
-					</div>
-				</form>
+				
+					<ul class="deviceList">
+										
+					</ul>
+				
 			</div>
+					
 		</div>
-	</div>
-	
+    </div>
 	
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -75,13 +56,14 @@
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="js/HomeClient.js"></script>
 
 </body>
 </html>

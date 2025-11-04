@@ -115,7 +115,7 @@ function renderDevices(devices) {
 // Variable para almacenar la fila seleccionada
 let selectedDeviceRow = null;
 async function handleDeviceSelect(deviceId) {
-	window.location.href = `../deviceView/deviceView.html?deviceId=${deviceId}`;
+	window.location.href = `../deviceView/index.html?deviceId=${deviceId}`;
 }
 
 // Renderizar dispositivos al cargar la página

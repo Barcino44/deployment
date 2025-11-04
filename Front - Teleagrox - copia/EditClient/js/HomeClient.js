@@ -77,7 +77,7 @@ async function editClient() {
     let data = await response.json();
     if (response.status == 200) {
         alert('Cliente actualizado con éxito.');
-        window.location.href = 'editClient.html?id=' + clientId;
+        window.location.href = 'index.html?id=' + clientId;
     } else {
         alert(data.message || 'Error al actualizar el cliente.');
     }
@@ -108,7 +108,7 @@ let deviceIds = deviceTF.value
     let data = await response.json();
     if (response.status == 200) {
         alert('Dispositivos añadidos con éxito.');
-        window.location.href = 'editClient.html?id=' + clientId;
+        window.location.href = 'index.html?id=' + clientId;
     } else {
         alert(data.message || 'Error al añadir dispositivos.');
     }

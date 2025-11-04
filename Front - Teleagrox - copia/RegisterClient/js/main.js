@@ -50,7 +50,7 @@ if (!emailTF.value.trim()) {
     let data = await response.json();
     if (response.status == 200) {
         alert(data.message || 'cliente registrado con éxito.');
-        window.location.href = '../HomeAdmin/home.html';
+        window.location.href = '../HomeAdmin/index.html';
     } else {
         alert(data.message || 'Error al registrar el cliente.');
     }

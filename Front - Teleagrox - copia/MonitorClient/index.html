@@ -1,4 +1,4 @@
-<html lang="en">
+ <html lang="en">
 <head>
 	<title>Login V1</title>
 	<meta charset="UTF-8">
@@ -6,7 +6,7 @@
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/deviceView/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/HomeAdmin/css/bootstrap.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -21,7 +21,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-    <div class="container-login100 flex-grow-1 d-flex justify-content-center align-items-center" style="position: relative;">
+<div class="container-login100 flex-grow-1 d-flex justify-content-center align-items-center" style="position: relative;">
         <!-- Navbar sobrepuesta al fondo -->
         <nav class="navbar navbar-dark navbar-overlap">
             <div class="container align-items-center">
@@ -31,32 +31,39 @@
                 </a>
             </div>
         </nav>
-		<div class="sidebar-overlap">
-            <span id="id-device" class="control-label"></span>
-            <a href="#"><i class="fa fa-home" style="color: #35ae51;"></i><span class="login100-form-title" style="color: #35ae51;">HOME</span></a>
-			<a href="#"><i class="fa fa-sign-out" id="exitButton"></i><span class="login100-form-title">SALIR</span></a>
-        </div>
-		<div class = "charts-wrapper">
+			<div class="sidebar-overlap">
+				<div class="header-bar">
+					<button class="login100-form-title" onclick="window.history.back()">
+						<i class="fa fa-arrow-left"></i> REGRESAR
+					</button>
+				</div>
+				<span id="clientTitle" class="login102-form-title"> 
+					MONITOREANDO EL CLIENTE:  <span id="clientId"></span>
+				</span>
+			</div>
+		<div class="main-content">
 			<div class="wrap-login100">
-                
-				<span class="login100-form-title">
-                    Mediciones de temperatura
+				<span class="login101-form-title">
+							ÚLTIMOS ERRORES
 				</span>
-                <div id="chartContainer" class="chart-container"></div>
-				
-            </div>
-            <div class="wrap-login100">
-                <span class="login100-form-title">
-                    Mediciones de humedad
+				<div id="errorContainer"></div>
+				<form class="login100-form validate-form">
+					<!-- tus inputs aquí -->
+				</form>
+				</div>
+				<div class="wrap-login100">
+				<span class="login101-form-title">
+							ESTADO DE LOS DISPOSITIVOS
 				</span>
-				<div id="chartContainer2" class="chart-container"></div>
-						
-						
-					
-            </div>
+				<div id="deviceContainer"></div>
+				<form class="login100-form validate-form">
+					<!-- tus inputs aquí -->
+				</form>
+				</div>
+			</div>
 		</div>
     </div>
-	
+
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -66,14 +73,13 @@
 	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="js/deviceView.js"></script>
+	<script src="js/HomeClient.js"></script>
 
 </body>
 </html>

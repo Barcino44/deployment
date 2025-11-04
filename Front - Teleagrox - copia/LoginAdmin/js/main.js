@@ -37,7 +37,7 @@ async function postLogin(LoginRequest){
     if(response.ok) {
         let client= JSON.stringify(data);
         localStorage.setItem('client', data.id);
-        window.location.href = '../HomeAdmin/home.html';
+        window.location.href = '../HomeAdmin/index.html';
      } else {
         alert(data.message);
     }

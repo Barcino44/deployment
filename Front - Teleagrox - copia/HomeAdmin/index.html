@@ -6,7 +6,7 @@
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/RegisterClient/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/HomeAdmin/css/bootstrap.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -32,20 +32,30 @@
             </div>
         </nav>
 		<div class="sidebar-overlap">
-            <a href="/HomeAdmin/home.html"><i class="fa fa-home"></i><span class="login100-form-title">HOME</span></a>
-			<a href="/RegisterClient/register.html"><i class="fa fa-user"></i><span class="login100-form-title">REGISTRAR CLIENTE</span></a>
-			<a href="/DevicesList/register.html"><i class="fa fa-mobile" style="color: #35ae51;"></i><span class="login100-form-title" style="color: #35ae51;">DISPOSITIVOS</span></a>
-			<a href="/LoginAdmin/loginAdmin.html"><i class="fa fa-sign-out"></i><span class="login100-form-title">SALIR</span></a>
+            <a href="/HomeAdmin/index.html"><i class="fa fa-home" style="color: #35ae51;"></i><span class="login100-form-title" style="color: #35ae51;">HOME</span></a>
+			<a href="/RegisterClient/index.html"><i class="fa fa-user"></i><span class="login100-form-title">REGISTRAR CLIENTE</span></a>
+			<a href="/DevicesList/index.html"><i class="fa fa-mobile" aria-hidden="true"></i><span class="login100-form-title">DISPOSITIVOS</span></a>
+			<a href="/LoginAdmin/index.html"><i class="fa fa-sign-out"></i><span class="login100-form-title">SALIR</span></a>
         </div>
-		<div class = "main-content">
+		<div class="main-content">
 			<div class="wrap-login100">
 				<span class="login101-form-title">
-							DISPOSITIVOS SIN CLIENTE
+					LISTA DE CLIENTES
 				</span>
-				<div id="idDeviceContainer"></div>
+				<div id="clientsContainer"></div>
 				<form class="login100-form validate-form">
 					<!-- tus inputs aquí -->
 				</form>
+			</div>
+			<div class="wrap-login100">
+				<span class="login101-form-title">
+							ÚLTIMOS ERRORES
+				</span>
+				<div id="errorContainer"></div>
+				<form class="login100-form validate-form">
+					<!-- tus inputs aquí -->
+				</form>
+				</div>
 			</div>
 		</div>
     </div>

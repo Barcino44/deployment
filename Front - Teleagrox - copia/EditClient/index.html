@@ -21,16 +21,16 @@
 <!--===============================================================================================-->
 </head>
 <body>
-<div class="container-login100 flex-grow-1 d-flex justify-content-center align-items-center" style="position: relative;">
-        <!-- Navbar sobrepuesta al fondo -->
-        <nav class="navbar navbar-dark navbar-overlap">
-            <div class="container align-items-center">
-                <a class="navbar-brand m-0">
-                    <img src="images/Teleagrox2.png" alt="Teleagrox" 
-                        style="height:70px; display: block; margin: 0 auto;">
-                </a>
-            </div>
-        </nav>
+	<div class="container-login100 flex-grow-1 d-flex justify-content-center align-items-center" style="position: relative;">
+			<!-- Navbar sobrepuesta al fondo -->
+			<nav class="navbar navbar-dark navbar-overlap">
+				<div class="container align-items-center">
+					<a class="navbar-brand m-0">
+						<img src="images/Teleagrox2.png" alt="Teleagrox" 
+							style="height:70px; display: block; margin: 0 auto;">
+					</a>
+				</div>
+			</nav>
 			<div class="sidebar-overlap">
 				<div class="header-bar">
 					<button class="login100-form-title" onclick="window.history.back()">
@@ -38,31 +38,66 @@
 					</button>
 				</div>
 				<span id="clientTitle" class="login102-form-title"> 
-					MONITOREANDO EL CLIENTE:  <span id="clientId"></span>
+					EDITANDO EL CLIENTE:  <span id="clientId"></span>
 				</span>
 			</div>
-		<div class="main-content">
-			<div class="wrap-login100">
-				<span class="login101-form-title">
-							ÚLTIMOS ERRORES
-				</span>
-				<div id="errorContainer"></div>
-				<form class="login100-form validate-form">
-					<!-- tus inputs aquí -->
-				</form>
+			<div class = "main-content">
+				<div class="wrap-login100">
+					<form class="login100-form validate-form">
+						<div class="login-form">
+							<span class="login100-form-title">
+						INFORMACIÓN DEL CLIENTE
+					</span>
+				</div>
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" placeholder="Nombre" id="nameTF">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" placeholder="Correo" id="emailTF">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn" id="editBTN" type="button">
+								Editar
+							</button>
+						</div>
+					</form>
 				</div>
 				<div class="wrap-login100">
-				<span class="login101-form-title">
-							ESTADO DE LOS DISPOSITIVOS
-				</span>
-				<div id="deviceContainer"></div>
-				<form class="login100-form validate-form">
-					<!-- tus inputs aquí -->
-				</form>
+					<span class="login101-form-title">
+								AÑADIR DISPOSITIVOS
+					</span>
+					<div class="wrap-input100 validate-input">
+						<textarea class="input100" id="deviceTF" placeholder="ids separados por ;"></textarea>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+						</span>
+					</div>
+						<div class="container-login100-form-btn">
+							<button class="login100-form-btn" id="addDevicesBTN" type="button">
+								Añadir
+							</button>
+						</div>
+				</div>
+				<div class="wrap-login100">
+					<span class="login101-form-title">
+								DISPOSITIVOS DISPONIBLES
+					</span>
+					<div id="idDeviceContainer"></div>
+					<form class="login100-form validate-form">
+						<!-- tus inputs aquí -->
+					</form>
 				</div>
 			</div>
 		</div>
-    </div>
 
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>

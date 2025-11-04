@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener('DOMContentLoaded', () => {
   btn.addEventListener('click', (e) => {
     e.preventDefault(); // opcional si es <a href="#">
-    window.location.href = '../HomeClient/HomeClient.html';
+    window.location.href = '../HomeClient/index.html';
   });
 });
 

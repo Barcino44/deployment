@@ -125,7 +125,7 @@ async function editClient(selectedClient) {
         alert('Por favor seleccione un cliente para editar.');
         return;
     }
-    window.location.href = `../EditClient/editClient.html?id=${selectedClient.id}`;
+    window.location.href = `../EditClient/index.html?id=${selectedClient.id}`;
 }
 
 async function monitorClient(selectedClient) {
@@ -133,7 +133,7 @@ async function monitorClient(selectedClient) {
         alert('Por favor seleccione un cliente para monitorear.');
         return;
     }
-    window.location.href = `../MonitorClient/monitorClient.html?id=${selectedClient.id}`;
+    window.location.href = `../MonitorClient/index.html?id=${selectedClient.id}`;
 }
 
 async function loadClientErrors() {
