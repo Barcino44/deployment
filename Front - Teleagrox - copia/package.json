@@ -1,0 +1,15 @@
+{
+  "name": "teleagrox-frontend",
+  "version": "1.0.0",
+  "description": "Frontend estático para TeleAgrox con vistas separadas (LoginAdmin, RegisterClient, etc.)",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve . -s -l 8080"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
