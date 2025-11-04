@@ -13,7 +13,7 @@ async function getDevicesAndRender() {
 		return;
 	}
 	try {
-		const response = await fetch(`http://localhost:8080/client/get/devices/${clientId}`);
+		const response = await fetch(`http://deployment.railway.internal:8080/client/get/devices/${clientId}`);
 		if (!response.ok) throw new Error('Error al obtener dispositivos');
 		const data = await response.json();
 		renderDevices(data);
@@ -23,7 +23,7 @@ async function getDevicesAndRender() {
 	}
 }
 async function getDeviceStatus() {
-	const response = await fetch(`http://localhost:8080/client/device/get/status/${clientId}`);
+	const response = await fetch(`http://deployment.railway.internal:8080/client/device/get/status/${clientId}`);
 	if (!response.ok) throw new Error('Error al obtener el estado del dispositivo');
 	deviceStatus = await response.json();
 }

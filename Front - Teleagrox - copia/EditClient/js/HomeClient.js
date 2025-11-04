@@ -26,7 +26,7 @@ async function getClientData() {
         return;
     }
 
-    let response = await fetch(`http://localhost:8080/admin/clients/${clientId}`, {
+    let response = await fetch(`http://deployment.railway.internal:8080/admin/clients/${clientId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -67,7 +67,7 @@ async function editClient() {
         },
     };
     let json = JSON.stringify(updateRequest);
-    let response = await fetch(`http://localhost:8080/admin/clients/update/${clientId}`, {
+    let response = await fetch(`http://deployment.railway.internal:8080/admin/clients/update/${clientId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ let deviceIds = deviceTF.value
 
 
     let json = JSON.stringify(deviceIds);
-   let response = await fetch(`http://localhost:8080/admin/clients/addDevicetoClient/${clientId}`, {
+   let response = await fetch(`http://deployment.railway.internal:8080/admin/clients/addDevicetoClient/${clientId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -118,7 +118,7 @@ async function getUnlinkedDevices() {
     const container = document.getElementById("idDeviceContainer");
     container.innerHTML = "";
 
-    let response = await fetch("http://localhost:8080/admin/clients/unlinkedDevices", {
+    let response = await fetch("http://deployment.railway.internal:8080/admin/clients/unlinkedDevices", {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     });

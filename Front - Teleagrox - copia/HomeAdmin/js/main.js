@@ -7,7 +7,7 @@ getClientList();
 loadClientErrors();
 
 async function getClientList() {
-    let response = await fetch("http://localhost:8080/admin/clients", {
+    let response = await fetch("http://deployment.railway.internal:8080/admin/clients", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ async function deleteClient(selectedClient) {
     }
 
     if (confirm(`¿Estás seguro de que deseas eliminar al cliente ${selectedClient.name}?`)) {
-        fetch(`http://localhost:8080/admin/clients/delete/${selectedClient.email}`, {
+        fetch(`http://deployment.railway.internal:8080/admin/clients/delete/${selectedClient.email}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -137,7 +137,7 @@ async function monitorClient(selectedClient) {
 }
 
 async function loadClientErrors() {
-    let response = await fetch("http://localhost:8080/admin/errors", {
+    let response = await fetch("http://deployment.railway.internal:8080/admin/errors", {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

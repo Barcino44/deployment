@@ -4,7 +4,7 @@ async function getUnlinkedDevices() {
     const container = document.getElementById("idDeviceContainer");
     container.innerHTML = "";
 
-    let response = await fetch("http://localhost:8080/admin/clients/unlinkedDevices", {
+    let response = await fetch("http://deployment.railway.internal:8080/admin/clients/unlinkedDevices", {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
     });
@@ -87,7 +87,7 @@ async function deleteDevices(deviceIds) {
         return;
     }
     if (confirm(`¿Estás seguro de que deseas eliminar a los dispositivos seleccionados?`)) {
-        const response = await fetch("http://localhost:8080/admin/devices/delete", {
+        const response = await fetch("http://deployment.railway.internal:8080/admin/devices/delete", {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(deviceIds)

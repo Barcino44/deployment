@@ -15,7 +15,7 @@ showDeviceStatus()
 async function loadDeviceErrors() {
     const urlParams = new URLSearchParams(window.location.search);
     const clientId = urlParams.get('id');
-    let response = await fetch(`http://localhost:8080/admin/errors/${clientId}`, {
+    let response = await fetch(`http://deployment.railway.internal:8080/admin/errors/${clientId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
@@ -73,7 +73,7 @@ async function showDeviceStatus() {
 
     deviceContainer.innerHTML = "";
 
-    let response = await fetch(`http://localhost:8080/admin/errors/${clientId}`, {
+    let response = await fetch(`http://deployment.railway.internal:8080/admin/errors/${clientId}`, {
         method: "GET",
         headers: { "Content-Type": "application/json" }
     });
@@ -173,7 +173,7 @@ async function deleteDevices(clientId, deviceIds) {
     }
 
     try {
-        const response = await fetch("http://localhost:8080/admin/clients/unlinkDevice", {
+        const response = await fetch("http://deployment.railway.internal:8080/admin/clients/unlinkDevice", {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
